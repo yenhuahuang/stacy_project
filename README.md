@@ -5,7 +5,7 @@ project overview
 * Designed and developed a system to respond COVID-19 crisis
 * Intergrated a system that allowed hospital and CDC in nation can process every steps related to COVID-19, including testing, quarantine management, message request/response, etc from different organization within one system to increase efficiency 
 >ZooPower
-* Using Swift, XCode, Firebase, Sketch
+* Using Swift, Xcode, Firebase, Sketch
 * An ios running app which combined with social activities and collection game, connecting people with the same interest
 * Implemented geo-fencing to increase performance and richness
 >lifeProject
