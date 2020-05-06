@@ -19,9 +19,10 @@
 - Rvised mutation rate, fitness score for cells and for-loop method to run until more than ten thousand generations
 - Tested method with JUnit for every GA method
 
-> shopSite(website for food shopping)
+> shopSite
 
 - Using Java spring framework, HTML,CSS, MySQL
-- Vendor can manage, create, update and delete items. Also, vendor can process customer's requests and orders.
-- For customers, they can add favorite items to shopping cart and decide to process this order or not.
-- Develped with elaborate user story and UI/UX design in advance.
+- Website for food shopping:
+  - Vendor can manage, create, update and delete items. Also, vendor can process customer's requests and orders.
+  - For customers, they can add favorite items to shopping cart and decide to process this order or not.
+  - Develped with elaborate user story and UI/UX design in advance.
