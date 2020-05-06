@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eae20cd4-113d-4c52-9c73-4a510b838c5b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../apache-maven-3.3.9/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZsUO9KonhVd8J6RxWIHZIlEigx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="test" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.ScenarioTest">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sample" />
+      <module name="Selenium_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Sample" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample.hello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Sample" />
+      <option name="METHOD_NAME" value="hello" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Sample" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScenarioTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ScenarioTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ScenarioTest" />
+        <item itemvalue="JUnit.Sample.hello" />
+        <item itemvalue="JUnit.Sample" />
+        <item itemvalue="JUnit.Sample.test" />
+        <item itemvalue="Application.Sample" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eae20cd4-113d-4c52-9c73-4a510b838c5b" name="Default Changelist" comment="" />
+      <created>1585627260391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585627260391</updated>
+      <workItem from="1585627263900" duration="7718000" />
+      <workItem from="1585637776965" duration="9402000" />
+      <workItem from="1585875100189" duration="1681000" />
+      <workItem from="1585926252051" duration="18000" />
+      <workItem from="1586147862542" duration="3154000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="240" y="65" key="#Project_Structure" timestamp="1586150693837">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="65" key="#Project_Structure/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585881504736" />
+    <state x="240" y="65" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1586150693837" />
+    <state x="374" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586149031051">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="374" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585638876428" />
+    <state x="374" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1586149031051" />
+    <state x="406" y="266" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586150942369">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="406" y="266" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585627790961" />
+    <state x="406" y="266" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.800@0.0.1280.800" timestamp="1586150942369" />
+    <state width="1238" height="273" key="GridCell.Tab.0.bottom" timestamp="1586151178392">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.774/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.774" timestamp="1585627819662" />
+    <state width="1238" height="336" key="GridCell.Tab.0.bottom/0.0.1280.800/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.800" timestamp="1585629244756" />
+    <state width="1238" height="273" key="GridCell.Tab.0.bottom/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585794342001" />
+    <state width="1238" height="273" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1586151178392" />
+    <state width="1238" height="273" key="GridCell.Tab.0.bottom/0.23.1280.751/-1265.-1057.1920.1057/655.-1897.1080.1897@0.23.1280.751" timestamp="1585669927335" />
+    <state width="1238" height="273" key="GridCell.Tab.0.center" timestamp="1586151178391">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.774/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.774" timestamp="1585627819659" />
+    <state width="1238" height="336" key="GridCell.Tab.0.center/0.0.1280.800/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.800" timestamp="1585629244753" />
+    <state width="1238" height="273" key="GridCell.Tab.0.center/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585794341998" />
+    <state width="1238" height="273" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1586151178391" />
+    <state width="1238" height="273" key="GridCell.Tab.0.center/0.23.1280.751/-1265.-1057.1920.1057/655.-1897.1080.1897@0.23.1280.751" timestamp="1585669927332" />
+    <state width="1238" height="273" key="GridCell.Tab.0.left" timestamp="1586151178390">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.774/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.774" timestamp="1585627819655" />
+    <state width="1238" height="336" key="GridCell.Tab.0.left/0.0.1280.800/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.800" timestamp="1585629244752" />
+    <state width="1238" height="273" key="GridCell.Tab.0.left/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585794341993" />
+    <state width="1238" height="273" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1586151178390" />
+    <state width="1238" height="273" key="GridCell.Tab.0.left/0.23.1280.751/-1265.-1057.1920.1057/655.-1897.1080.1897@0.23.1280.751" timestamp="1585669927330" />
+    <state width="1238" height="273" key="GridCell.Tab.0.right" timestamp="1586151178392">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.774/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.774" timestamp="1585627819660" />
+    <state width="1238" height="336" key="GridCell.Tab.0.right/0.0.1280.800/-1265.-1057.1920.1057/655.-1897.1080.1897@0.0.1280.800" timestamp="1585629244755" />
+    <state width="1238" height="273" key="GridCell.Tab.0.right/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585794341999" />
+    <state width="1238" height="273" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1586151178392" />
+    <state width="1238" height="273" key="GridCell.Tab.0.right/0.23.1280.751/-1265.-1057.1920.1057/655.-1897.1080.1897@0.23.1280.751" timestamp="1585669927333" />
+    <state x="178" y="62" key="Maven.ArtifactSearchDialog" timestamp="1586150109061">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="178" y="62" key="Maven.ArtifactSearchDialog/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585635747756" />
+    <state x="178" y="62" key="Maven.ArtifactSearchDialog/0.0.1280.800@0.0.1280.800" timestamp="1586150109061" />
+    <state x="419" y="149" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585628923507">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="419" y="149" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800/-1265.-1080.1920.1080/655.-1920.1080.1920@0.0.1280.800" timestamp="1585628923507" />
+  </component>
+</project>
