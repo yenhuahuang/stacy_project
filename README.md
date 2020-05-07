@@ -11,6 +11,7 @@
 - Using Swift, Xcode, Firebase, Sketch
 - An ios running app which combined with social activities and collection game, connecting people with the same interest
 - Implemented geo-fencing to increase performance and richness
+- demo video: https://youtu.be/vufz3x3ErrI
 
 > lifeProject
 
