@@ -11,14 +11,14 @@
 
 - Using Swift, Xcode, Firebase, Sketch
 - An ios running app which combined with social activities and collection game, connecting people with the same interest
-- Implemented geo-fencing to increase performance and richness
+- Implemented geo-fencing method to increase performance and richness
 - demo video: https://youtu.be/vufz3x3ErrI
 
 > lifeProject
 
 - Using Java, jenetics library
 - Implemented Conway's game of life based on genetic algorithm using Java
-- Rvised mutation rate, fitness score and pattern selection algorithms to run until more than ten thousand generations
+- Optimized mutation rate, fitness score and pattern selection algorithms to run until more than ten thousand generations
 - Tested method with JUnit for every GA method
 
 > shopSite
