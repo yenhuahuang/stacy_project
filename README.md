@@ -4,7 +4,7 @@
 
 - Using Java Swing, SQL developer, OpenCV
 - Designed and developed a system to respond COVID-19 crisis
-- Intergrated a system that allowed hospital and CDC in nation can process every steps related to COVID-19, including testing, quarantine management, message request/response, etc from different organization within one system to increase efficiency
+- Intergrated a system that allows hospital and CDC in nation can process every steps related to COVID-19, including testing, quarantine management, message request/response, from different organization within one system to increase efficiency
 - demo video: https://youtu.be/JrfotAvfI6w
 
 > ZooPower
