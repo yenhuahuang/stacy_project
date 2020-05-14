@@ -4,13 +4,13 @@
 
 - Using Java Swing, SQL developer, OpenCV
 - Designed and developed a system to respond COVID-19 crisis
-- Intergrated a system that allows hospital and CDC in nation can process every steps related to COVID-19, including testing, quarantine management, message request/response, from different organization within one system to increase efficiency
+- Intergrated a system that allows hospital and CDC in nation can process every step related to COVID-19, including testing, quarantine management, message request/response from different organization, within one system to increase efficiency
 - demo video: https://youtu.be/JrfotAvfI6w
 
 > ZooPower
 
 - Using Swift, Xcode, Firebase, Sketch
-- An ios running app which combined with social activities and collection game, connecting people with the same interest
+- An ios running app which combined with social activities and collection game, connecting people with the same interest. Users can collect animals by accumulating their running mileage in the specific zone which is divided by geo-fencing. Also, users can launch the running activities and have fun with friends
 - Implemented geo-fencing method to increase performance and richness
 - demo video: https://youtu.be/vufz3x3ErrI
 
@@ -23,7 +23,7 @@
 
 > shopSite
 
-- Using Java spring framework, HTML,CSS, MySQL
+- Using Java spring framework, HTML,CSS, JavaScript, MySQL
 - Website for food shopping:
   - Vendor can manage, create, update and delete items. Also, vendor can process customer's requests and orders.
   - For customers, they can add favorite items to shopping cart and decide to process this order or not.
@@ -32,4 +32,4 @@
 >SeleniumTest
 
 - Using Java, testNG, and Selenium
-- Tested Northeastern website with course selection and browsing, add important site from main page 
+- Tested for Northeastern website with course selection and browsing, add important site from main page 
