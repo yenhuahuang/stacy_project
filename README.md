@@ -1,5 +1,5 @@
 ## project overview
-###### For  detailed introduction:  
+###### For  detailed introduction (mandarin version):  
 https://drive.google.com/file/d/1NKIVMDFeFlz4o3r3h0xSL4oL2O_IwkST/view?usp=sharing
 
 > WiCare_db4o
