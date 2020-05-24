@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Update Book</title>
+</head>
+<body>
+
+<form action="bookUpdate" th:object="${book}" method ="post">
+
+  名稱:<input type="text" name="name" th:field="*{name}"/><br/>
+
+  類別:<select name = "bookCategory" th:field="*{bookCategory}">
+  <option th:each="bookCategory : ${allBookCategories}" 
+          th:value="${bookCategory.id}" 
+          th:text="${bookCategory.name}">商業</option>
+</select>
+  
+ 價格:<input type="number" name ="price" th:field="*{price}"/><br/>
+
+ <input type="hidden" name ="id" th:field="*{id}"/>
+ <input type="submit" value="Submit"/>
+
+</form>
+
+</body>
+</html>

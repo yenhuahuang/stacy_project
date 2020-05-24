@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>產品資訊</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/bookRetrieveAll">切換至使用者頁面</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li class="active"><a href="/admin/productRetrieveAll">產品管理</a></li>
+      <li><a href="/admin/productdetailRetrieveAll">庫存管理</a></li>
+      <li><a href="/admin/orderRetrieveAll">訂單管理</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<body>
+	
+	<a href="/admin/productCreate" class="btn btn-info" role="button">新增產品</a>
+	<form th:action="@{/admin/productRetrieveByCategory}" method="post">
+		類別:<select name="productCategory" th:field="${productCategory.id}">
+			<option th:each="productCategory : ${allProductCategories}"
+				th:value="${productCategory.id}" th:text="${productCategory.name}">商業</option>
+		</select> <input type="submit" value="確認" /> <a th:href="@{/admin/productRetrieveAll}"><input
+			type="button" value="檢視所有食物" /></a>
+	</form>
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>代號</th>
+			<th>產品名稱</th>
+			<th>產品種類</th>
+			<th>產品庫存</th>
+			<th>產品品牌</th>
+			<th>定價</th>
+			<th>優惠</th>
+			<th>優惠日期</th>
+			<th>產地</th>
+			<th>製造商</th>
+
+			<th></th>
+		</tr>
+		<tr th:each="product : ${allproducts} " th:object="${product}">
+			<td th:text="*{id}">1</td>
+			<td th:text="*{name}">food</td>
+			<td th:text="*{productCategory.name}">food</td>
+			<td th:text="*{inventory}">1</td>
+			<td th:text="*{brand}">56</td>
+			<td th:text="*{price}">56</td>
+			<td th:text="*{sale}">56</td>
+			<td th:text="*{saledate}">56</td>
+			<td th:text="*{location}">56</td>
+			<td th:text="*{firm}">56</td>
+
+
+			<td><a th:href="@{/admin/productUpdate(id=${product.id})}"
+				class="btn btn-info" role="button">修改</a> <a
+				th:href="@{/admin/productDelete(id=${product.id})}" class="btn btn-info"
+				role="button">刪除</a></td>
+		</tr>
+	</table>
+
+</body>
+</html>

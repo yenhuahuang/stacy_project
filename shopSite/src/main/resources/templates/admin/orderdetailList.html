@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>訂單細項</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+         <a class="navbar-brand" href="/bookRetrieveAll">切換至使用者頁面</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="/admin/productRetrieveAll">產品管理</a></li>
+      <li><a href="/admin/productdetailRetrieveAll">庫存管理</a></li>
+      <li  class="active"><a href="/admin/orderRetrieveAll">訂單管理</a></li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+	
+	
+
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>訂單編號</th>
+			<th>產品名稱</th>
+			
+			<th>訂購數量</th>
+			
+			<th>單價</th>
+			<th>小計</th>
+		</tr>
+		<tr th:each="orderdetail : ${allorderdetails} " th:object="${orderdetail}">
+			<td th:text="*{myKey.orderid}">1</td>
+			<td th:text="*{myKey.product.name}">food</td>
+			
+			<td th:text="*{count}">1</td>
+			<td th:text="*{price}">56</td>
+			
+			<td th:text="*{stotal}">0</td>
+		</tr>
+	</table>
+	<p>總金額 : </p>	
+	<p th:object="${order}" th:text="*{total}"> </p>	
+	<a th:href="@{/admin/orderRetrieveAll}" class="btn btn-info" role="button" >回訂單管理</a>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>更新資料</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			    <a class="navbar-brand" href="/bookRetrieveAll">切換至使用者頁面</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="/admin/productRetrieveAll">產品管理</a></li>
+			<li><a href="/admin/productdetailRetrieveAll">庫存管理</a></li>
+			<li><a href="/admin/orderRetrieveAll">訂單管理</a></li>
+		</ul>
+	</div>
+</nav>
+<body>
+<p>Hello
+	<span th:text="${session.loginId}">login id</span>!</p>
+	<form th:action="@{/admin/productUpdate}" th:object="${product}" method="post">
+
+		產品描述:<input type="text" name="name" th:field="*{name}" />
+		<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+		<br></br> 產品種類:
+		<div class="form-group">
+			<select name="productCategory">
+				<option th:each="productCategory : ${allProductCategories}"
+					th:value="${productCategory.id}" th:text="${productCategory.name}">商業</option>
+			</select>
+		</div>
+		<br></br> 產品品牌:<input type="text" name="brand" th:field="*{brand}" />
+		<div th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"></div>
+		<br></br> 訂價:<input type="text" name="price" th:field="*{price}" />
+		<div th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></div>
+		<br></br> 優惠:<input type="text" name="sale" th:field="*{sale}" />
+		<div th:if="${#fields.hasErrors('sale')}" th:errors="*{sale}"></div>
+		<br></br> 優惠日期:<input type="date" name="saledate"
+			th:field="*{saledate}" />
+		<div th:if="${#fields.hasErrors('saledate')}" th:errors="*{saledate}"></div>
+		<br></br> 產地:<input type="text" name="location" th:field="*{location}" />
+		<div th:if="${#fields.hasErrors('location')}" th:errors="*{location}"></div>
+		<br></br> 製造商:<input type="text" name="firm" th:field="*{firm}" />
+		<div th:if="${#fields.hasErrors('firm')}" th:errors="*{firm}"></div>
+		<br></br> <input type="hidden" name="id" th:field="*{id}" /> <input
+			type="submit" value="Submit" />
+
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>更新資料</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+          <a class="navbar-brand" href="/bookRetrieveAll">切換至使用者頁面</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="/admin/productRetrieveAll">產品管理</a></li>
+      <li><a href="/admin/productdetailRetrieveAll">庫存管理</a></li>
+      <li><a href="/admin/orderRetrieveAll">訂單管理</a></li>
+    </ul>
+  </div>
+</nav>
+<body>
+<p>Hello
+	<span th:text="${session.loginId}">login id</span>!</p>
+<form th:action="@{/admin/productdetailUpdate}" th:object="${productdetail}" method ="post">
+
+ 產品名稱:<div class="form-group">
+  <select name = "product">
+  <option th:each="product : ${allProducts}" 
+          th:value="${product.id}" 
+          th:text="${product.name}">商業</option>
+</select>
+</div><br></br>
+ 產品庫存:<input type="text" name ="inventory" th:field="*{inventory}"/>
+ <div th:if="${#fields.hasErrors('inventory')}" th:errors="*{inventory}"></div><br></br>
+
+ 有效日期:<input type="date" name ="expire" th:field="*{expire}"/>
+ <div th:if="${#fields.hasErrors('expire')}" th:errors="*{expire}"></div><br></br>
+  <input type="hidden" name ="id" th:field="*{id}"/>
+ <input type="submit" value="Submit"/>
+
+</form>
+
+</body>
+</html>

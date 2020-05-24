@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>訂單</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+table, th, td {
+	text-align: center;
+	vertical-align: bottom;
+}
+.navbar-default .navbar-nav > li.dropdown:hover > a, 
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+</style>
+</head>
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="/admin/productRetrieveAll">切換至管理者頁面</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="/bookRetrieveAll">首頁</a></li>
+				<li class="active"><a href="/orderRetrieveBycus">訂單查詢</a></li>
+
+			</ul>
+			<form class="navbar-form navbar-left" action="booksearch"
+				method="post">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜尋商品"
+						name="name" />
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/shoppingCartList"><span
+						class="glyphicon glyphicon-shopping-cart"></span>檢視購物車</a></li>
+				<li><a href="/login"><span
+						class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+<body>
+
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>訂單編號</th>
+			<th>訂購會員</th>
+
+			<th>訂購期限</th>
+
+			<th>總額</th>
+			<th>出貨狀態</th>
+			<th></th>
+		</tr>
+		<tr th:each="order : ${allorders} " th:object="${order}">
+			<td th:text="*{id}">1</td>
+			<td th:text="*{member.name}">food</td>
+
+			<td th:text="*{orderdate}">1</td>
+			<td th:text="*{total}">56</td>
+			<td th:text="*{situation}">56</td>
+			<td>
+				<form th:action="@{/orderdetailRetrievecus}" method="post">
+					<input type="hidden" name="oid" th:value="*{id}"/> 
+					<input type="submit" value="檢視訂單" class="btn btn-info" />
+				</form>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

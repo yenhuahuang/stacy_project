@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>產品庫存資訊</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+          <a class="navbar-brand" href="/bookRetrieveAll">切換至使用者頁面</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="/admin/productRetrieveAll">產品管理</a></li>
+      <li class="active"><a href="/admin/productdetailRetrieveAll">庫存管理</a></li>
+      <li><a href="/admin/orderRetrieveAll">訂單管理</a></li>
+    </ul>
+  </div>
+</nav>
+<body>
+    
+	<a href="/admin/productdetailCreate" class="btn btn-info" role="button">進貨</a>
+	<form th:action="@{/admin/productdetailRetrieveByproduct}" method="post">
+		食物:<select name="product" th:field="${product.id}">
+			<option th:each="product : ${allProducts}"
+				th:value="${product.id}" th:text="${product.name}">商業</option>
+		</select> <input type="submit" value="確認" /> <a href="/admin/productdetailRetrieveAll"><input
+			type="button" value="檢視所有庫存" /></a>
+	</form>
+	
+	
+
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>代號</th>
+			<th>產品名稱</th>
+			
+			<th>產品庫存</th>
+			
+			<th>有效日期</th>
+			<th>進貨日期</th>
+			<th>到貨日期</th>
+			<th></th>
+		</tr>
+		<tr th:each="productdetail : ${allproductdetails} " th:object="${productdetail}">
+			<td th:text="*{id}">1</td>
+			<td th:text="*{product.name}">food</td>
+			
+			<td th:text="*{inventory}">1</td>
+			<td th:text="*{expire}">56</td>
+			<td th:text="*{indate}">56</td>
+			<td th:text="*{reach}">56</td>
+			
+			<td><a th:href="@{/admin/productReach(id=${productdetail.id})}"
+				class="btn btn-info" role="button">到貨</a> <a
+				th:href="@{/admin/productdetailDelete(id=${productdetail.id})}" class="btn btn-info"
+				role="button">刪除</a></td>
+		</tr>
+	</table>
+
+</body>
+</html>

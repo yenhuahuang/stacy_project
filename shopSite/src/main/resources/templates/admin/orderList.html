@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>訂單</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+#DIV1 {
+	width: 90px;
+	float: left;
+}
+</style>
+</head>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/bookRetrieveAll">切換至使用者頁面</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="/admin/productRetrieveAll">產品管理</a></li>
+			<li><a href="/admin/productdetailRetrieveAll">庫存管理</a></li>
+			<li class="active"><a href="/admin/orderRetrieveAll">訂單管理</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+<body>
+
+	<form th:action="@{/admin/orderRetrieveBymember}" method="post">
+		會員:<select name="member" th:field="${member.id}">
+			<option th:each="member : ${allMembers}" th:value="${member.id}"
+				th:text="${member.name}">商業</option>
+		</select> <input type="submit" value="確認" />
+	</form>
+	<form th:action="@{/admin/orderRetrieveBysituation}" method="post">
+		出貨狀態:<select name="situation">
+			<option value="未出貨">未出貨</option>
+			<option value="出貨中">出貨中</option>
+			<option value="已到貨">已到貨</option>
+		</select> <input type="submit" value="確認" />
+	</form>
+	<a href="/admin/orderRetrieveAll"><input type="button"
+		value="顯示所有訂單" /></a>
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>訂單編號</th>
+			<th>訂購會員</th>
+
+			<th>訂購期限</th>
+
+			<th>總額</th>
+			<th>出貨狀態</th>
+			<th>變更狀態</th>
+			<th></th>
+		</tr>
+		<tr th:each="order : ${allorders} " th:object="${order}">
+			<td th:text="*{id}">1</td>
+			<td th:text="*{member.name}">food</td>
+
+			<td th:text="*{orderdate}">1</td>
+			<td th:text="*{total}">56</td>
+			<td th:text="*{situation}">56</td>
+			<td>
+				<div id="DIV1">
+					<form th:action="@{/admin/orderGo}" method="post">
+						<input type="hidden" name="oid" th:value="*{id}" /> <input
+							type="submit" value="出貨" class="btn btn-warning" />
+					</form>
+				</div>
+				<div>
+					<form th:action="@{/admin/orderReach}" method="post">
+						<input type="hidden" name="oid" th:value="*{id}" /> <input
+							type="submit" value="到貨" class="btn btn-success" />
+					</form>
+				</div>
+			</td>
+			<td>
+				<form th:action="@{/admin/orderdetailRetrieveByorder}" method="post">
+					<input type="hidden" name="oid" th:value="*{id}" /> <input
+						type="submit" value="檢視訂單" class="btn btn-info" />
+				</form>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

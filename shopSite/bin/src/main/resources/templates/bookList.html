@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>List ALl Books</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+table, th, td {
+	text-align: center;
+	vertical-align: middle;
+}
+.navbar-default
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-nav
+>
+li
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:hover
+>
+a
+,
+.navbar-default
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-nav
+>
+li
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:hover
+>
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:hover
+,
+</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/admin/productRetrieveAll">切換至管理者頁面</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/bookRetrieveAll">首頁</a></li>
+				<li><a href="/orderRetrieveBycus">訂單查詢</a></li>
+
+			</ul>
+			<form class="navbar-form navbar-left" action="booksearch"
+				method="post">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜尋商品"
+						name="name" />
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/shoppingCartList"><span
+						class="glyphicon glyphicon-shopping-cart"></span>檢視購物車</a></li>
+				<li><a href="/login"><span
+						class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+			</ul>
+		</div>
+	</nav>
+	Hello
+	<span th:text="${session.loginId}">login id</span>!
+	<form th:action="@{bookRetrieveByCategory}" method="post">
+		類別:<select name="bookCategory" th:field="${bookCategory.id}">
+			<option th:each="bookCategory : ${allBookCategories}"
+				th:value="${bookCategory.id}" th:text="${bookCategory.name}">商業</option>
+		</select> <input type="submit" value="確認" /> <a href="bookRetrieveAll"><input
+			type="button" value="檢視所有商品" /></a> <a href="bookRetrievebySale"><input
+			type="button" value="檢視特價商品" /></a>
+	</form>
+
+
+
+
+	<table class="table table-bordered table-hover">
+		<tr>
+			<th>編號</th>
+			<th>類別</th>
+			<th>名稱</th>
+			<th>價格</th>
+			<th>促銷價</th>
+			<th>是否特價</th>
+			<th>照片</th>
+			<th></th>
+		</tr>
+
+		<tr th:each="book : ${allBooks} " th:object="${book}">
+
+			<td th:text="*{id}">1</td>
+			<td th:text="*{productCategory.name}">business</td>
+			<td th:text="*{name}">Ben</td>
+			<td th:text="*{price}">300</td>
+			<td th:text="*{sale}">Ben</td>
+			<td th:text="*{underdate}">300</td>
+			<td><img th:src="'http://localhost:8080/files/'+*{photo}"
+				width="300px" height="300px" /></td>
+
+			<td><form th:action="@{/bookChooseCount}" method="post">
+					<select name="count" onChange="this.form.submit()">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select> <input type="hidden" name="bid" th:value="*{id}" />
+				</form> <br /> <br />
+				<p>目前數量</p>
+				<p th:object="${book}" th:text="*{count}"></p> <br /> <br /> <a
+				th:href="@{shoppingCartAdd(id=*{id},count=*{count})}">加入購物車</a></td>
+		</tr>
+
+	</table>
+
+
+</body>
+</html>

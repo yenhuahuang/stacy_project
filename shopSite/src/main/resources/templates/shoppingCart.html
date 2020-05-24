@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Shopping Cart</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+table, th, td {
+	text-align: center;
+	vertical-align: bottom;
+}
+.navbar-default
+
+ 
+
+.navbar-nav
+>
+li
+
+
+.dropdown
+
+
+:hover
+>
+a
+,
+.navbar-default
+
+ 
+
+.navbar-nav
+>
+li
+
+
+.dropdown
+
+
+:hover
+>
+a
+
+
+:hover
+,
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/admin/productRetrieveAll">切換至管理者頁面</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="/bookRetrieveAll">首頁</a></li>
+				<li><a href="/orderRetrieveBycus">訂單查詢</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li  class="active"><a href="/shoppingCartList"><span
+						class="glyphicon glyphicon-shopping-cart"></span>檢視購物車</a></li>
+				<li><a href="/login"><span
+						class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+			</ul>
+		</div>
+	</nav>
+	Shopping Cart for
+	<span th:text="${session.loginId}">login id</span>
+	<a href="bookRetrieveAll"><input type="button"
+		value="Keep Shopping" /></a>
+	<table class="table table-bordered table-hover">
+		<tr>
+			<th>編號</th>
+			<th>類別</th>
+			<th>名稱</th>
+			<th>價格</th>
+			<th>數量</th>
+			<th></th>
+		</tr>
+		<tr th:each="book,counter : ${@shoppingCart.cart} "
+			th:object="${book}">
+			<td th:text="*{id}">1</td>
+			<td th:text="*{productCategory.name}">business</td>
+			<td th:text="*{name}">Ben</td>
+			<td th:text="*{now}">300</td>
+			<td th:text="*{count}">Ben</td>
+
+			<td><a th:href="@{cartDelete(id=${counter.index})}">刪除</a></td>
+		</tr>
+
+
+	</table>
+	<a href="/orderAdd" class="btn btn-primary" role="button">確認結帳</a>
+</body>
+</html>
